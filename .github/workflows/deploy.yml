@@ -1,20 +1,14 @@
 name: Deploy to GitHub Pages
 
-# Trigger on push to main OR when a PR targeting main is merged
 on:
   push:
     branches:
-      - main
-  pull_request:
-    types:
-      - closed
+      - main  # this covers both manual merges and auto-merges
 
 jobs:
   build:
     name: Build Docusaurus
     runs-on: ubuntu-latest
-    # Only run if this is a push to main OR a PR was merged
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,10 +34,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions:
-      pages: write       # Needed to deploy to GitHub Pages
-      id-token: write    # Needed for deployment verification
+      pages: write
+      id-token: write
 
-    # Deploy to the github-pages environment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
