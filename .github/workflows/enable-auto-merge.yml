@@ -13,11 +13,8 @@ jobs:
       actions: read
 
     steps:
-      - name: Enable Auto-Merge When CI Passes
+      - name: Enable Auto-Merge
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           merge-method: squash
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-for-ci: true
-          wait-for-ci-checks: |
-            Build Docusaurus
