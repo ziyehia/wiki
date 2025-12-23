@@ -1,35 +1,39 @@
-name: Deploy Wiki
+name: Deploy Docusaurus Wiki
 
 on:
   push:
     branches:
-      - main
+      - main  # deploy on every push to main
 
 permissions:
-  contents: write
+  contents: write  # required for GITHUB_TOKEN to push
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      # 1️⃣ Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      # 2️⃣ Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: yarn
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
-      - name: Configure git
-        run: |
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      # 4️⃣ Build site
+      - name: Build Docusaurus site
+        run: yarn build
 
-
-      - run: yarn deploy
+      # 5️⃣ Deploy to gh-pages
+      - name: Deploy
+        run: yarn deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_USER: ziyehia
+          GIT_USER: ziyehia               # your GitHub username
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # built-in token
