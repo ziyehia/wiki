@@ -28,7 +28,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ziyehia', // Usually your GitHub org/user name.
-  projectName: 'test-wiki', // Usually your repo name.
+  projectName: 'wiki', // Usually your repo name.
 
   trailingSlash: false,  // optional but recommended for GitHub Pages
   deploymentBranch: 'gh-pages',

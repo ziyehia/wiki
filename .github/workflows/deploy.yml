@@ -1,40 +1,27 @@
-name: Deploy Docusaurus
+name: Deploy Wiki
 
 on:
   push:
     branches:
-      - main  # deploy when main branch is pushed
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
+          cache: yarn
 
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build site
-        run: yarn build
-
-      - name: Deploy to GitHub Pages
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - run: yarn deploy
         env:
-          USE_SSH: true
-        run: yarn deploy
-      
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_DEPLOY_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-
-      - run: ssh -T git@github.com
-
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
