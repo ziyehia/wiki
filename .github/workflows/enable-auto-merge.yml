@@ -1,19 +1,14 @@
-name: Enable Pull Request Auto-Merge
+name: Auto-merge PRs after CI
 
 on:
   pull_request:
     types: [opened, reopened, synchronize]
 
 jobs:
-  auto-merge:
+  automerge:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write        # Needed to merge PRs
-      pull-requests: write   # Needed to enable auto-merge
-
     steps:
-      - name: Enable auto-merge
-        uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          merge-method: squash
+      - name: Auto-merge PR when checks pass
+        run: gh pr merge ${{ github.event.pull_request.number }} --squash --auto
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
