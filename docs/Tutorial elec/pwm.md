@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Quick guide to generate a PWM signal with an ST microcontroller
 
 ## What is it? 
