@@ -3,6 +3,14 @@ name: Enable auto-merge
 on:
   pull_request:
     types: [opened, reopened, synchronize]
+name: Enable PR Auto Merge
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 permissions:
   pull-requests: write
@@ -12,6 +20,12 @@ jobs:
   enable:
     runs-on: ubuntu-latest
     steps:
+  enable-auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v4
+
       - name: Enable auto-merge
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
