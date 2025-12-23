@@ -2,46 +2,33 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction tutoriels
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Ici vous retrouverez l'ensemble des **tutoriels** mis à disposition pour améliorer vos créations robotiques et autres.
 
-## Getting Started
+## Électronique
+Dans la catégorie **électronique** vous apprendrez à maîtriser n'importe quelle carte de développement et câbler n'importe quel composant grâce à des tutos sur:
 
-Get started by **creating a new site**.
+- les **timers**
+- les **PWM**
+- les **liasions SPI, I2C, UART**
+- l'évaluation de la **consommation énergitique**
+- la **soudure**
+- un logiciel de **conception de PCB (KiCad)**
+- et bien d'autres encore...
+- 
+## Informatique
+Dans la catégorie **informatique** vous acquerrez les bases de la programmation en **HTML, CSS, JavaScript** afin de créer votre propre site web et vous (re)découvrirez les langages **C, Java et Python**.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Mécanique
+Dans cette courte section, vous apprendrez à utiliser des **logiciels de conception 3D** (en particulier, **Onshape**) et à **imprimer** vos créations à l'ENSEA.
 
-### What you'll need
+## Robotique
+Cette section se focalisera davantage sur l'aspect **robotique**, spécifiquement, vous apprendrez à:
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- utiliser la **VM de l'ENSEA**
+- installer **Ubuntu** (Linux)
+- installer et utiliser **ROS**
 
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## Autres
+Dans cette section nous vous ferons découvrir des sujets plus ou moins particulier qu'il nous siéra de vous partager.
