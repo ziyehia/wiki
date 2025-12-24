@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 
-# Trigger when a PR targeting main is merged
+# Trigger when a PR targeting main is merged (i.e., push to main)
 on:
   push:
     branches:
@@ -38,6 +38,8 @@ jobs:
     permissions:
       pages: write       # Needed to deploy to GitHub Pages
       id-token: write    # Needed for deployment verification
+    environment:
+      name: github-pages  # <---- THIS IS REQUIRED
 
     steps:
       - name: Deploy to GitHub Pages
