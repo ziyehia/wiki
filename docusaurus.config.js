@@ -20,15 +20,16 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://ziyehia.github.io',
+  url: 'https://aresensea.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/wiki/',
+  baseUrl: '/AresHubWiki/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ziyehia', // Usually your GitHub org/user name.
-  projectName: 'wiki', // Usually your repo name.
+  organizationName: 'AresEnsea',
+  // Usually your GitHub org/user name.
+  projectName: 'AresHubWiki', // Usually your repo name.
 
   trailingSlash: false,  // optional but recommended for GitHub Pages
   deploymentBranch: 'gh-pages',
@@ -53,8 +54,7 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/ziyehia/wiki/tree/main/docs/',
+          editUrl: 'https://github.com/AresEnsea/AresHubWiki/tree/main/docs/',
         },
         blog: {
           showReadingTime: true,
@@ -64,8 +64,7 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/ziyehia/wiki/tree/main/blog/',
+          editUrl: 'https://github.com/AresEnsea/AresHubWiki/tree/main/blog/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
