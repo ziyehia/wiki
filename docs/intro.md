@@ -16,7 +16,7 @@ Dans la catégorie **électronique** vous apprendrez à maîtriser n'importe que
 - la **soudure**
 - un logiciel de **conception de PCB (KiCad)**
 - et bien d'autres encore...
-- 
+
 ## Informatique
 Dans la catégorie **informatique** vous acquerrez les bases de la programmation en **HTML, CSS, JavaScript** afin de créer votre propre site web et vous (re)découvrirez les langages **C, Java et Python**.
 
@@ -32,5 +32,3 @@ Cette section se focalisera davantage sur l'aspect **robotique**, spécifiquemen
 
 ## Autres
 Dans cette section nous vous ferons découvrir des sujets plus ou moins particulier qu'il nous siéra de vous partager.
-
-(test)
