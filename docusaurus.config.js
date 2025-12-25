@@ -10,9 +10,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Wiki',
-  tagline: 'Dinosaurs are aight',
-  favicon: 'img/favicon.ico',
+  title: 'ARES-Hub',
+  tagline: 'Bienvenue sur le wiki d\'ARES, l\'association de robotique et d\'électronique de l\'ENSEA !',
+  favicon: '/img/Ares_Clear.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -79,84 +79,89 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      colorMode: {
-        respectPrefersColorScheme: true,
-      },
-      navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+      ({
+        // Replace with your project's social card
+        image: '/img/Ares_Clear.jpeg',
+        navbar: {
+          title: 'ARES-Hub',
+          logo: {
+            alt: "Logo d'ARES",
+            src: '/img/Ares_Clear.png',
+          },
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'tutorialSidebar',
+              position: 'left',
+              label: 'Tutoriels',
+            },
+            {to: '/blog', label: 'Actualités', position: 'left'},
+            {
+              href: 'https://github.com/AresEnsea/',
+              label: 'GitHub',
+              position: 'right',
+            },
+          ],
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+        footer: {
+          style: 'dark',
+          links: [
+            {
+              title: 'Accueil',
+              items: [
+                {
+                  label: 'Tutoriels',
+                  to: '/docs/intro',
+                },
+                {
+                  label: 'Actualités',
+                  to: '/blog',
+                },
+              ],
+            },
+            {
+              title: 'Contact',
+              items: [
+                {
+                  label: 'LinkedIn',
+                  href: 'https://www.linkedin.com/company/ares-ensea/',
+                },
+                {
+                  label: 'Instagram',
+                  href: 'https://www.instagram.com/aresensea/',
+                },
+                {
+                  label: 'Facebook',
+                  href: 'https://www.facebook.com/AresENSEA/',
+                },
+              ],
+            },
+            {
+              title: 'Autres',
+              items: [
+                {
+                  label: 'GitHub',
+                  href: 'https://github.com/AresEnsea/',
+                },
+                {
+                  label: 'Site web',
+                  href: 'https://ares.asso-ensea.fr/',
+                },
+                {
+                  label: 'Ancien Wiki',
+                  href: 'https://wiki.ares.asso-ensea.fr/index.php/Bienvenue_sur_le_Wiki_d%27Ares_!',
+                },
+              ],
+            },
+          ],
+          copyright: `Copyright © ${new Date().getFullYear()} ARES, ENSEA`,
+        },
+        prism: {
+          theme: prismThemes.github,
+          darkTheme: prismThemes.dracula,
+        },
+      }),
 };
 
 export default config;
